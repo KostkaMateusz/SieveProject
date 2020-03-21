@@ -26,7 +26,7 @@ public class FileReaderWriter {
             if(fileWriter==null) System.out.println("Problem");
             else{
             fileWriter.close();
-                        }
+            }
         }
 
 

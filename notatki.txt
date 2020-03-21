@@ -1,0 +1,13 @@
+BufferedReader bf=null;
+
+try{
+bf=new BufferedReader(new FileReader(fileName));
+String linia=null;
+do{
+linia=bf.readline();
+if(linia!=null){
+sout(linia)
+}
+while(linia!=null;
+}catch(ioexception ex){sout(problem z dostepem do pliku);
+}finally{bf.cloese();

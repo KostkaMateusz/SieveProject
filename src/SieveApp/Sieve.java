@@ -26,9 +26,12 @@ public class Sieve {
     }
 
     public void sieveOfEratosthenes() {
-        // finally be false if i is Not a prime, else true.
-        // If prime[p] is not changed, then it is a prime
-        // Update all multiples of p
+        /*
+         finally be false if i is Not a prime, else true.
+         If prime[p] is not changed, then it is a prime
+         Update all multiples of p
+        */
+
         for (int p = 2; p * p <= upperBorder; p++)
             if (prime[p] == true)
                 for (int i = p * 2; i <= upperBorder; i += p)
