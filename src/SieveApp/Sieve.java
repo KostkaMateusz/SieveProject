@@ -6,12 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Sieve {
-   private int upperBorder;
-   private int lowerBorder=2;
-   private boolean[] prime;
-   private List<Integer> primeNumbersList=new ArrayList<>();
+    private int upperBorder;
+    private int lowerBorder=2;
+    private boolean[] prime;
+    private List<Integer> primeNumbersList=new ArrayList<>();
 
-    // Create a boolean array "prime[0..n]" and initialize
+    public Sieve(){};
+
+
     public Sieve(int upperBorder){
         this.upperBorder=upperBorder;
         this.prime=new boolean[upperBorder + 1];
@@ -19,10 +21,17 @@ public class Sieve {
     }
 
     public Sieve(int lowerBorder,int upperBorder){
-        this.upperBorder=upperBorder;
+        this(upperBorder);
         this.lowerBorder=lowerBorder;
-        this.prime=new boolean[upperBorder + 1];
-        Arrays.fill(prime, true);
+    }
+
+    public void setUpperBorder(int upperBorder) {
+       this.upperBorder = upperBorder;
+
+    }
+
+    public void setLowerBorder(int lowerBorder) {
+        this.lowerBorder = lowerBorder;
     }
 
     public void sieveOfEratosthenes() {
@@ -52,7 +61,7 @@ public class Sieve {
 
 
     public void printPrimeNumbers() {
-        System.out.println("These are PrimeNumbers from 2 to "+upperBorder+":");
+        System.out.println("These are PrimeNumbers from "+lowerBorder+ " to "+upperBorder+":");
         int wydrukowane=0;
         for (int i = lowerBorder; i <= upperBorder; i++) {
             if (prime[i] == true){
