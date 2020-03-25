@@ -13,7 +13,6 @@ public class Sieve {
 
     public Sieve(){};
 
-
     public Sieve(int upperBorder){
         this.upperBorder=upperBorder;
         this.prime=new boolean[upperBorder + 1];
@@ -25,22 +24,12 @@ public class Sieve {
         this.lowerBorder=lowerBorder;
     }
 
-    public void setUpperBorder(int upperBorder) {
-       this.upperBorder = upperBorder;
-
-    }
-
-    public void setLowerBorder(int lowerBorder) {
-        this.lowerBorder = lowerBorder;
-    }
-
     public void sieveOfEratosthenes() {
         /*
          finally be false if i is Not a prime, else true.
          If prime[p] is not changed, then it is a prime
          Update all multiples of p
         */
-
         for (int p = 2; p * p <= upperBorder; p++)
             if (prime[p] == true)
                 for (int i = p * 2; i <= upperBorder; i += p)
